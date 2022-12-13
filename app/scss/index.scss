@@ -1,0 +1,14 @@
+iframe
+{
+	align-self: center;
+	width: 500px;
+	height: 420px;
+}
+
+@media(max-width: 600px)
+{
+	iframe
+	{
+		width: 100%;
+	}
+}

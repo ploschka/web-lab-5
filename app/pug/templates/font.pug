@@ -1,0 +1,32 @@
+extends ../base.pug
+
+block stylesheet
+    link(rel="stylesheet", href="css/font.css")
+
+block active
+    - 
+        let activeIndex = 4;
+block content
+    -
+        let images = [
+            'img/css-text-decoration.png',
+            'img/css-probely.png',
+            'img/css-text.png'
+        ];
+    div.gallery
+        each image in images
+            div.pict
+                img(src=image)
+    p 
+        | font - универсальное свойство, которое позволяет одновременно задать несколько характеристик шрифта и текста.
+        br
+        | Синтаксис
+        br
+        | font: [font-style||font-variant||font-weight] font-size [/line-height] font-family | inherit
+
+    p
+        | font-style - определяет начертание шрифта: обычное, курсивное или наклонное. Когда для текста установлено курсивное или наклонное начертание, браузер обращается к системе для поиска подходящего шрифта. Если заданный шрифт не найден, браузер использует специальный алгоритм для имитации нужного вида текста. Результат и качество при этом могут получиться неудовлетворительными, особенно при печати документа.
+        br
+        | Синтаксис
+        br
+        | font-style: normal | italic | oblique | inherit

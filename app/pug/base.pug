@@ -1,0 +1,51 @@
+html
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+        title Lox
+        link(rel="stylesheet", href="css/main.css")
+        block stylesheet
+    body
+        block active
+        -
+            let menuItems = [
+                {
+                    text: 'CSS',
+                    active: false,
+                    link: 'index.html'
+                },
+                {
+                    text: 'Синтаксис CSS',
+                    active: false,
+                    link: '#'
+                },
+                {
+                    text: 'Вставка CSS',
+                    active: false,
+                    link: '#'
+                },
+                {
+                    text: 'CSS текст',
+                    active: false,
+                    link: '#'
+                },
+                {
+                    text: 'CSS шрифт',
+                    active: false,
+                    link: 'font.html'
+                },
+                {
+                    text: 'Блоки',
+                    active: false,
+                    link: '#'
+                }
+            ];
+            menuItems[activeIndex].active=true;
+        div.main
+            div.menu
+                each val in menuItems
+                    if val.active
+                        a.menu-item.active(href=val.link)= val.text
+                    else
+                        a.menu-item(href=val.link)= val.text
+            block content
