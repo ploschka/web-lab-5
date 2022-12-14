@@ -45,15 +45,27 @@ body
 	}
 }
 
-p
+.text_img
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+}
+
+.paragraph, p
 {
 	text-align: justify;
 	line-height: 2;
-	text-indent: 1.25rem;
+	text-indent: 1.25rem;	
+}
+
+.img
+{
+	min-width: 200px;
+	margin: 10px;
 	img
 	{
-		float: right;
-		margin: 10px;
+		width:100%;
 	}
 }
 
@@ -73,14 +85,13 @@ p
 		flex-wrap: wrap;
 	}
 
-	p
+	.text_img
 	{
-		img
-		{
-			display: block;
-			margin: auto;
-			float: none;
-			align-self: center;
-		}
+		flex-direction: column-reverse;
+	}
+
+	.img
+	{
+		min-width: auto;
 	}
 }
